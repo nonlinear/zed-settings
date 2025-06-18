@@ -1,247 +1,2762 @@
 {
-  "Bootstrap button group": {
-    "prefix": "btn",
-    "body": [
-      "${2:<!-- Options:",
-      "position: replace .btn-group with .btn-group-vertical",
-      "size: .btn-group-lg, .btn-group-sm, or .btn-group-xs",
-      "checkbox, radio:",
-      "1. add data-toggle=\"buttons\" on div",
-      "2. checkbox button: <label class=\"btn btn-primary\"><input type=\"checkbox\">[Title]</label>",
-      "3. radio button: <label class=\"btn btn-primary\"><input type=\"radio\">[Title]</label>",
-      " -->",
-      "}<div class=\"btn-group\">",
-      "  ${1:buttons here}",
-      "</div>"
-    ],
-    "description": "Bootstrap button group"
-  },
-  "Bootstrap card": {
-    "prefix": "card",
-    "body": [
-      "<div class=\"card\">",
-      "  <img class=\"card-img-top img-fluid\" src=\"${1:image path}\" alt=\"${2:alt}\">",
-      "  <div class=\"card-block\">",
-      "    <h4 class=\"card-title\">${3:title}</h4>",
-      "    <p class=\"card-text\">${4:text}</p>",
-      "    <a href=\"#\" class=\"btn btn-primary\">${5:button}</a>",
-      "  </div>",
-      "</div>"
-    ],
-    "description": "Bootstrap card"
-  },
-  "Bootstrap badge": {
-    "prefix": "badge",
-    "body": [
-      "<span class=\"badge${2: pull-right}\">${1:content}</span>"
-    ],
-    "description": "Bootstrap badge"
-  },
-  "Bootstrap modal window": {
-    "prefix": "modal",
-    "body": [
-      "<div id=\"${1:myModal}\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"${1:myModal}Label\" aria-hidden=\"true\">",
-      "      <div class=\"modal-dialog\">",
-      "        <div class=\"modal-content\">",
-      "          <div class=\"modal-header\">",
-      "            ${2:<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">×</button>",
-      "            }<h4 class=\"modal-title\" id=\"${1:myModal}Label\">${3:Modal title}</h4>",
-      "          </div>",
-      "          <div class=\"modal-body\">",
-      "            ${4:Modal body}",
-      "          </div>",
-      "          <div class=\"modal-footer\">",
-      "            <a href=\"#\" class=\"btn btn-default pull-left\" data-dismiss=\"modal\">${5:Cancel}</a>",
-      "            <a href=\"${7:#}\" class=\"btn btn-primary\">${6:Save}</a>",
-      "          </div>",
-      "        </div>",
-      "      </div>",
-      "    </div>"
-    ],
-    "description": "Bootstrap modal window"
-  },
-  "Bootstrap collapse group": {
-    "prefix": "collapse",
-    "body": [
-      "<div class=\"panel-group\" id=\"${1:collapse}\">",
-      "${2:collapse panels here}",
-      "</div>"
-    ],
-    "description": "Bootstrap collapse group"
-  },
-  "Bootstrap popover": {
-    "prefix": "popover",
-    "body": [
-      "<a data-toggle=\"popover\" ${1:title=\"${2:Popover title}\"} ${3:data-html=\"true\"} data-content=\"${4:Popover content}\" data-placement=\"${5:top|bottom|left|right}\">${6:Popover trigger}</a>"
-    ],
-    "description": "Bootstrap popover"
-  },
-  "Bootstrap tooltip": {
-    "prefix": "tooltip",
-    "body": [
-      "<a href=\"#\" data-toggle=\"tooltip\" title=\"${1:Tooltip Content}\"${3: data-html=\"true\"}${4: data-placement=\"${5:top|bottom|left|right}\"}>${2:Tooltip trigger}</a>"
-    ],
-    "description": "Bootstrap tooltip"
-  },
-  "bootstrap JS CDN": {
-    "prefix": "cdn",
-    "body": [
-      "<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\" integrity=\"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=\" crossorigin=\"anonymous\"></script>",
-      "<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>"
-    ],
-    "description": "bootstrap JS CDN"
-  },
-  "Bootstrap grid": {
-    "prefix": "grid",
-    "body": [
-      "<div class=\"container\">",
-      "  <div class=\"row\">",
-      "    <div class=\"col-${1:xs|md|lg}-${4:4}\">${7:Column 1 content}</div>",
-      "    <div class=\"col-${2:xs|md|lg}-${5:4}\">${8:Column 2 content}</div>",
-      "    <div class=\"col-${3:xs|md|lg}-${6:4}\">${9:Column 3 content}</div>",
-      "  </div>",
-      "</div>"
-    ],
-    "description": "Bootstrap grid"
-  },
-  "Bootstrap dropdown": {
-    "prefix": "dropdown",
-    "body": [
-      "${9:<!-- for divider, use <li class=\"divider\"></li> -->",
-      "}<div class=\"dropdown\">",
-      "  <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">",
-      "    ${1:Dropdown trigger}",
-      "  </a>",
-      "  <ul class=\"dropdown-menu\">",
-      "    <li><a href=\"${6:#}\">${3:First option}</a></li>",
-      "    <li><a href=\"${7:#}\">${4:Second Option}</a></li>",
-      "    <li><a href=\"${8:#}\">${5:Third Option}</a></li>",
-      "  </ul>",
-      "</div>"
-    ],
-    "description": "Bootstrap dropdown"
-  },
-  "Bootstrap collapse panel": {
-    "prefix": "collapse",
-    "body": [
-      "<div class=\"panel\">",
-      "  <a data-toggle=\"collapse\" data-parent=\"#${1:collapse}\" href=\"#${2:collapseOne}\" class=\"collapse-trigger\">",
-      "    ${3:Panel 1 title}",
-      "  </a>",
-      "  <div id=\"${2:collapseOne}\" class=\"collapse in\">",
-      "    ${4:Panel 1 content}",
-      "  </div>",
-      "</div>"
-    ],
-    "description": "Bootstrap collapse panel"
-  },
-  "Bootstrap modal trigger": {
-    "prefix": "modal",
-    "body": [
-      "<a href=\"#\" data-toggle=\"modal\" data-target=\"#${1:myModal}\" ${3:data-backdrop=\"static\"}>${2:Modal trigger}</a>"
-    ],
-    "description": "Bootstrap modal trigger"
-  },
-  "Bootstrap button": {
-    "prefix": "btn",
-    "body": [
-      "${3:<!-- Options:",
-      "loading: data-loading-text=\"Loading...\"",
-      "size: .btn-lg, .btn-sm, or .btn-xs",
-      "action: .active, .disabled",
-      "other: .btn-block, .pull-right, .pull-left -->",
-      "}<a href=\"#\" class=\"btn btn-${1:default|primary|success|info|warning|danger|link}\">${2:[Content]}</a>"
-    ],
-    "description": "Bootstrap button"
-  },
-  "Bootstrap label": {
-    "prefix": "label",
-    "body": [
-      "<span class=\"label label-${2:default|primary|success|info|warning|danger}\">${1:content}</span>"
-    ],
-    "description": "Bootstrap label"
-  },
-  "Bootstrap tabs": {
-    "prefix": "tabs",
-    "body": [
-      "<ul id=\"tab\" class=\"nav nav-tabs\">",
-      "  <li class=\"active\"><a href=\"#${1:tab1ID}\" data-toggle=\"tab\">${4:Tab 1 title}</a></li>",
-      "  <li><a href=\"#${2:tab2ID}\" data-toggle=\"tab\">${5:Tab 2 title}</a></li>",
-      "  <li><a href=\"#${3:tab3ID}\" data-toggle=\"tab\">${6:Tab 3 title}</a></li>",
-      "</ul>",
-      "<div id=\"myTabContent\" class=\"tab-content\">",
-      "  <div class=\"tab-pane fade in active\" id=\"${1:tab1ID}\">",
-      "    ${7:<p>Tab 1 content</p>}",
-      "  </div>",
-      "  <div class=\"tab-pane fade\" id=\"${2:tab2ID}\">",
-      "    ${8:<p>Tab 2 content</p>}",
-      "  </div>",
-      "  <div class=\"tab-pane fade\" id=\"${3:tab3ID}\">",
-      "    ${9:<p>Tab 3 content</p>}",
-      "  </div>",
-      "</div>"
-    ],
-    "description": "Bootstrap tabs"
-  },
-  "alert bootstrap macro": {
-    "prefix": "alert",
-    "body": [
-      "<div class=\"alert alert-${1:info|success|warning|danger}\">",
-      "    ${2:<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">×</button>",
-      "    }${3:text}",
-      "</div>"
-    ],
-    "description": "alert bootstrap macro"
-  },
-  "bootstrap CSS CDN": {
-    "prefix": "cdn",
-    "body": [
-      "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">"
-    ],
-    "description": "bootstrap CSS CDN"
-  },
-  "opacity filter": {
-    "prefix": "filter",
-    "body": [
-      "opacity(${1:[number or %]})"
-    ],
-    "description": "opacity filter"
-  },
-  "invert filter": {
-    "prefix": "filter",
-    "body": [
-      "invert(${1:[number or %]})"
-    ],
-    "description": "invert filter"
-  },
-  "url filter": {
-    "prefix": "filter",
-    "body": [
-      "url(${1:[url]})"
-    ],
-    "description": "url filter"
-  },
-  "brightness filter": {
-    "prefix": "filter",
-    "body": [
-      "brightness(${1:[number or %]})"
-    ],
-    "description": "brightness filter"
-  },
-  "contrast filter": {
-    "prefix": "filter",
-    "body": [
-      "contrast(${1:[number or %]})"
-    ],
-    "description": "contrast filter"
-  },
-  "drop-shadow filter": {
-    "prefix": "filter",
-    "body": [
-      "drop-shadow(${1:x} ${2:y} ${3:blur} rgba(${4:black}, ${5:0.9}))"
-    ],
-    "description": "drop-shadow filter"
-  },
+   "Bootstrap button group":{
+      "prefix":"btn1",
+      "body":[
+         "${2:<!-- Options:",
+         "position: replace .btn-group with .btn-group-vertical",
+         "size: .btn-group-lg, .btn-group-sm, or .btn-group-xs",
+         "checkbox, radio:",
+         "1. add data-toggle=\"buttons\" on div",
+         "2. checkbox button: <label class=\"btn btn-primary\"><input type=\"checkbox\">[Title]</label>",
+         "3. radio button: <label class=\"btn btn-primary\"><input type=\"radio\">[Title]</label>",
+         " -->",
+         "}<div class=\"btn-group\">",
+         "  ${1:buttons here}",
+         "</div>"
+      ],
+      "description":"Bootstrap button group"
+   },
+   "Bootstrap card":{
+      "prefix":"card",
+      "body":[
+         "<div class=\"card\">",
+         "  <img class=\"card-img-top img-fluid\" src=\"${1:image path}\" alt=\"${2:alt}\">",
+         "  <div class=\"card-block\">",
+         "    <h4 class=\"card-title\">${3:title}</h4>",
+         "    <p class=\"card-text\">${4:text}</p>",
+         "    <a href=\"#\" class=\"btn btn-primary\">${5:button}</a>",
+         "  </div>",
+         "</div>"
+      ],
+      "description":"Bootstrap card"
+   },
+   "Bootstrap badge":{
+      "prefix":"badge",
+      "body":[
+         "<span class=\"badge${2: pull-right}\">${1:content}</span>"
+      ],
+      "description":"Bootstrap badge"
+   },
+   "Bootstrap modal window":{
+      "prefix":"modal",
+      "body":[
+         "<div id=\"${1:myModal}\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"${1:myModal}Label\" aria-hidden=\"true\">",
+         "      <div class=\"modal-dialog\">",
+         "        <div class=\"modal-content\">",
+         "          <div class=\"modal-header\">",
+         "            ${2:<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">×</button>",
+         "            }<h4 class=\"modal-title\" id=\"${1:myModal}Label\">${3:Modal title}</h4>",
+         "          </div>",
+         "          <div class=\"modal-body\">",
+         "            ${4:Modal body}",
+         "          </div>",
+         "          <div class=\"modal-footer\">",
+         "            <a href=\"#\" class=\"btn btn-default pull-left\" data-dismiss=\"modal\">${5:Cancel}</a>",
+         "            <a href=\"${7:#}\" class=\"btn btn-primary\">${6:Save}</a>",
+         "          </div>",
+         "        </div>",
+         "      </div>",
+         "    </div>"
+      ],
+      "description":"Bootstrap modal window"
+   },
+   "Bootstrap collapse group":{
+      "prefix":"collapse",
+      "body":[
+         "<div class=\"panel-group\" id=\"${1:collapse}\">",
+         "${2:collapse panels here}",
+         "</div>"
+      ],
+      "description":"Bootstrap collapse group"
+   },
+   "Bootstrap popover":{
+      "prefix":"popover",
+      "body":[
+         "<a data-toggle=\"popover\" ${1:title=\"${2:Popover title}\"} ${3:data-html=\"true\"} data-content=\"${4:Popover content}\" data-placement=\"${5:top|bottom|left|right}\">${6:Popover trigger}</a>"
+      ],
+      "description":"Bootstrap popover"
+   },
+   "Bootstrap tooltip":{
+      "prefix":"tooltip",
+      "body":[
+         "<a href=\"#\" data-toggle=\"tooltip\" title=\"${1:Tooltip Content}\"${3: data-html=\"true\"}${4: data-placement=\"${5:top|bottom|left|right}\"}>${2:Tooltip trigger}</a>"
+      ],
+      "description":"Bootstrap tooltip"
+   },
+   "bootstrap JS CDN":{
+      "prefix":"cdn",
+      "body":[
+         "<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\" integrity=\"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=\" crossorigin=\"anonymous\"></script>",
+         "<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>"
+      ],
+      "description":"bootstrap JS CDN"
+   },
+   "Bootstrap grid":{
+      "prefix":"grid",
+      "body":[
+         "<div class=\"container\">",
+         "  <div class=\"row\">",
+         "    <div class=\"col-${1:xs|md|lg}-${4:4}\">${7:Column 1 content}</div>",
+         "    <div class=\"col-${2:xs|md|lg}-${5:4}\">${8:Column 2 content}</div>",
+         "    <div class=\"col-${3:xs|md|lg}-${6:4}\">${9:Column 3 content}</div>",
+         "  </div>",
+         "</div>"
+      ],
+      "description":"Bootstrap grid"
+   },
+   "Bootstrap dropdown":{
+      "prefix":"dropdown",
+      "body":[
+         "${9:<!-- for divider, use <li class=\"divider\"></li> -->",
+         "}<div class=\"dropdown\">",
+         "  <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">",
+         "    ${1:Dropdown trigger}",
+         "  </a>",
+         "  <ul class=\"dropdown-menu\">",
+         "    <li><a href=\"${6:#}\">${3:First option}</a></li>",
+         "    <li><a href=\"${7:#}\">${4:Second Option}</a></li>",
+         "    <li><a href=\"${8:#}\">${5:Third Option}</a></li>",
+         "  </ul>",
+         "</div>"
+      ],
+      "description":"Bootstrap dropdown"
+   },
+   "Bootstrap collapse panel":{
+      "prefix":"collapse",
+      "body":[
+         "<div class=\"panel\">",
+         "  <a data-toggle=\"collapse\" data-parent=\"#${1:collapse}\" href=\"#${2:collapseOne}\" class=\"collapse-trigger\">",
+         "    ${3:Panel 1 title}",
+         "  </a>",
+         "  <div id=\"${2:collapseOne}\" class=\"collapse in\">",
+         "    ${4:Panel 1 content}",
+         "  </div>",
+         "</div>"
+      ],
+      "description":"Bootstrap collapse panel"
+   },
+   "Bootstrap modal trigger":{
+      "prefix":"modal",
+      "body":[
+         "<a href=\"#\" data-toggle=\"modal\" data-target=\"#${1:myModal}\" ${3:data-backdrop=\"static\"}>${2:Modal trigger}</a>"
+      ],
+      "description":"Bootstrap modal trigger"
+   },
+   "Bootstrap button":{
+      "prefix":"btn2",
+      "body":[
+         "${3:<!-- Options:",
+         "loading: data-loading-text=\"Loading...\"",
+         "size: .btn-lg, .btn-sm, or .btn-xs",
+         "action: .active, .disabled",
+         "other: .btn-block, .pull-right, .pull-left -->",
+         "}<a href=\"#\" class=\"btn btn-${1:default|primary|success|info|warning|danger|link}\">${2:[Content]}</a>"
+      ],
+      "description":"Bootstrap button"
+   },
+   "Bootstrap label":{
+      "prefix":"label",
+      "body":[
+         "<span class=\"label label-${2:default|primary|success|info|warning|danger}\">${1:content}</span>"
+      ],
+      "description":"Bootstrap label"
+   },
+   "Bootstrap tabs":{
+      "prefix":"tabs",
+      "body":[
+         "<ul id=\"tab\" class=\"nav nav-tabs\">",
+         "  <li class=\"active\"><a href=\"#${1:tab1ID}\" data-toggle=\"tab\">${4:Tab 1 title}</a></li>",
+         "  <li><a href=\"#${2:tab2ID}\" data-toggle=\"tab\">${5:Tab 2 title}</a></li>",
+         "  <li><a href=\"#${3:tab3ID}\" data-toggle=\"tab\">${6:Tab 3 title}</a></li>",
+         "</ul>",
+         "<div id=\"myTabContent\" class=\"tab-content\">",
+         "  <div class=\"tab-pane fade in active\" id=\"${1:tab1ID}\">",
+         "    ${7:<p>Tab 1 content</p>}",
+         "  </div>",
+         "  <div class=\"tab-pane fade\" id=\"${2:tab2ID}\">",
+         "    ${8:<p>Tab 2 content</p>}",
+         "  </div>",
+         "  <div class=\"tab-pane fade\" id=\"${3:tab3ID}\">",
+         "    ${9:<p>Tab 3 content</p>}",
+         "  </div>",
+         "</div>"
+      ],
+      "description":"Bootstrap tabs"
+   },
+   "alert bootstrap macro":{
+      "prefix":"alert",
+      "body":[
+         "<div class=\"alert alert-${1:info|success|warning|danger}\">",
+         "    ${2:<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">×</button>",
+         "    }${3:text}",
+         "</div>"
+      ],
+      "description":"alert bootstrap macro"
+   },
+   "bootstrap CSS CDN":{
+      "prefix":"cdn",
+      "body":[
+         "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">"
+      ],
+      "description":"bootstrap CSS CDN"
+   },
+   "opacity filter":{
+      "prefix":"filter",
+      "body":[
+         "opacity(${1:[number or %]})"
+      ],
+      "description":"opacity filter"
+   },
+   "invert filter":{
+      "prefix":"filter",
+      "body":[
+         "invert(${1:[number or %]})"
+      ],
+      "description":"invert filter"
+   },
+   "url filter":{
+      "prefix":"filter",
+      "body":[
+         "url(${1:[url]})"
+      ],
+      "description":"url filter"
+   },
+   "brightness filter":{
+      "prefix":"filter",
+      "body":[
+         "brightness(${1:[number or %]})"
+      ],
+      "description":"brightness filter"
+   },
+   "contrast filter":{
+      "prefix":"filter",
+      "body":[
+         "contrast(${1:[number or %]})"
+      ],
+      "description":"contrast filter"
+   },
+   "drop-shadow filter":{
+      "prefix":"filter",
+      "body":[
+         "drop-shadow(${1:x} ${2:y} ${3:blur} rgba(${4:black}, ${5:0.9}))"
+      ],
+      "description":"drop-shadow filter"
+   },
+   "blur filter":{
+      "prefix":"filter",
+      "body":[
+         "blur(${1:[px]})"
+      ],
+      "description":"blur filter"
+   },
+   "background filter":{
+      "prefix":"filter",
+      "body":[
+         "background: filter(url(${1:image path}), ${2:filter to use})"
+      ],
+      "description":"background filter"
+   },
+   "hue-rotate filter":{
+      "prefix":"filter",
+      "body":[
+         "hue-rotate(${1:[deg]})"
+      ],
+      "description":"hue-rotate filter"
+   },
+   "sepia filter":{
+      "prefix":"filter",
+      "body":[
+         "sepia(${1:[number or %]})"
+      ],
+      "description":"sepia filter"
+   },
+   "simple media query":{
+      "prefix":"responsive",
+      "body":[
+         "@media screen and (${1:max}-${2:width}: ${3:100px})",
+         "  $4"
+      ],
+      "description":"simple media query"
+   },
+   "range media query":{
+      "prefix":"responsive",
+      "body":[
+         "@media only screen and (min-device-${1:width}: ${2:100px}) and (max-device-${1:width}: ${3:100px})",
+         "  $4"
+      ],
+      "description":"range media query"
+   },
+   "not pseudo-element":{
+      "prefix":"not",
+      "body":[
+         "$1::not($2)"
+      ],
+      "description":"not pseudo-element"
+   },
+   "after pseudo-element":{
+      "prefix":"after",
+      "body":[
+         "$1::after"
+      ],
+      "description":"after pseudo-element"
+   },
+   "before pseudo-element":{
+      "prefix":"before",
+      "body":[
+         "$1::before"
+      ],
+      "description":"before pseudo-element"
+   },
+   "root pseudo-class":{
+      "prefix":"root",
+      "body":[
+         "$1:root"
+      ],
+      "description":"root pseudo-class"
+   },
+   "empty pseudo-class":{
+      "prefix":"empty",
+      "body":[
+         "$1:empty"
+      ],
+      "description":"empty pseudo-class"
+   },
+   "only-child pseudo-class":{
+      "prefix":"order",
+      "body":[
+         "$1:only-child"
+      ],
+      "description":"only-child pseudo-class"
+   },
+   "first-child pseudo-class":{
+      "prefix":"order",
+      "body":[
+         "$1:first-child"
+      ],
+      "description":"first-child pseudo-class"
+   },
+   "nth-last-of-type pseudo-class":{
+      "prefix":"order",
+      "body":[
+         "$1:nth-last-of-type($2)"
+      ],
+      "description":"nth-last-of-type pseudo-class"
+   },
+   "last-of-type pseudo-class":{
+      "prefix":"order",
+      "body":[
+         "$1:last-of-type"
+      ],
+      "description":"last-of-type pseudo-class"
+   },
+   "last-child pseudo-class":{
+      "prefix":"order",
+      "body":[
+         "$1:last-child"
+      ],
+      "description":"last-child pseudo-class"
+   },
+   "only-of-type pseudo-class":{
+      "prefix":"order",
+      "body":[
+         "$1:only-of-type"
+      ],
+      "description":"only-of-type pseudo-class"
+   },
+   "nth-child pseudo-class":{
+      "prefix":"order",
+      "body":[
+         "$1:nth-child($2)"
+      ],
+      "description":"nth-child pseudo-class"
+   },
+   "nth-of-type pseudo-class":{
+      "prefix":"order",
+      "body":[
+         "$1:nth-of-type($2)"
+      ],
+      "description":"nth-of-type pseudo-class"
+   },
+   "first-of-type pseudo-class":{
+      "prefix":"order",
+      "body":[
+         "$1:first-of-type"
+      ],
+      "description":"first-of-type pseudo-class"
+   },
+   "nth-last-child pseudo-class":{
+      "prefix":"order",
+      "body":[
+         "$1:nth-last-child($2)"
+      ],
+      "description":"nth-last-child pseudo-class"
+   },
+   "invalid pseudo-class":{
+      "prefix":"form",
+      "body":[
+         "$1:invalid"
+      ],
+      "description":"invalid pseudo-class"
+   },
+   "focus pseudo-class":{
+      "prefix":"form",
+      "body":[
+         "$1:focus"
+      ],
+      "description":"focus pseudo-class"
+   },
+   "optional pseudo-class":{
+      "prefix":"form",
+      "body":[
+         "$1:optional"
+      ],
+      "description":"optional pseudo-class"
+   },
+   "out-of-range pseudo-class":{
+      "prefix":"form",
+      "body":[
+         "$1:out-of-range"
+      ],
+      "description":"out-of-range pseudo-class"
+   },
+   "disabled pseudo-class":{
+      "prefix":"form",
+      "body":[
+         "$1:disabled"
+      ],
+      "description":"disabled pseudo-class"
+   },
+   "enabled pseudo-class":{
+      "prefix":"form",
+      "body":[
+         "$1:enabled"
+      ],
+      "description":"enabled pseudo-class"
+   },
+   "read-write pseudo-class":{
+      "prefix":"form",
+      "body":[
+         "$1:read-write"
+      ],
+      "description":"read-write pseudo-class"
+   },
+   "checked pseudo-class":{
+      "prefix":"form",
+      "body":[
+         "$1:checked"
+      ],
+      "description":"checked pseudo-class"
+   },
+   "in-range pseudo-class":{
+      "prefix":"form",
+      "body":[
+         "$1:in-range"
+      ],
+      "description":"in-range pseudo-class"
+   },
+   "read-only pseudo-class":{
+      "prefix":"form",
+      "body":[
+         "$1:read-only"
+      ],
+      "description":"read-only pseudo-class"
+   },
+   "required pseudo-class":{
+      "prefix":"form",
+      "body":[
+         "$1:required"
+      ],
+      "description":"required pseudo-class"
+   },
+   "valid pseudo-class":{
+      "prefix":"form",
+      "body":[
+         "$1:valid"
+      ],
+      "description":"valid pseudo-class"
+   },
+   "visited pseudo-class":{
+      "prefix":"link",
+      "body":[
+         "$1:visited"
+      ],
+      "description":"visited pseudo-class"
+   },
+   "active pseudo-class":{
+      "prefix":"link",
+      "body":[
+         "$1:active"
+      ],
+      "description":"active pseudo-class"
+   },
+   "target pseudo-class":{
+      "prefix":"link",
+      "body":[
+         "$1:target"
+      ],
+      "description":"target pseudo-class"
+   },
+   "link pseudo-class":{
+      "prefix":"link",
+      "body":[
+         "$1:link"
+      ],
+      "description":"link pseudo-class"
+   },
+   "hover pseudo-class":{
+      "prefix":"link",
+      "body":[
+         "$1:hover"
+      ],
+      "description":"hover pseudo-class"
+   },
+   "first-line pseudo-element":{
+      "prefix":"text",
+      "body":[
+         "$1::first-line"
+      ],
+      "description":"first-line pseudo-element"
+   },
+   "lang pseudo-class":{
+      "prefix":"text",
+      "body":[
+         "$1:lang($2)"
+      ],
+      "description":"lang pseudo-class"
+   },
+   "first-letter pseudo-element":{
+      "prefix":"text",
+      "body":[
+         "$1::first-letter"
+      ],
+      "description":"first-letter pseudo-element"
+   },
+   "selection pseudo-element":{
+      "prefix":"text",
+      "body":[
+         "$1::selection"
+      ],
+      "description":"selection pseudo-element"
+   },
+   "darken blend mode":{
+      "prefix":"blend",
+      "body":[
+         "${1:mix}-blend-mode: darken"
+      ],
+      "description":"darken blend mode"
+   },
+   "color-dodge blend mode":{
+      "prefix":"blend",
+      "body":[
+         "${1:mix}-blend-mode: color-dodge"
+      ],
+      "description":"color-dodge blend mode"
+   },
+   "luminosity blend mode":{
+      "prefix":"blend",
+      "body":[
+         "${1:mix}-blend-mode: luminosity"
+      ],
+      "description":"luminosity blend mode"
+   },
+   "difference blend mode":{
+      "prefix":"blend",
+      "body":[
+         "${1:mix}-blend-mode: difference"
+      ],
+      "description":"difference blend mode"
+   },
+   "screen blend mode":{
+      "prefix":"blend",
+      "body":[
+         "${1:mix}-blend-mode: screen"
+      ],
+      "description":"screen blend mode"
+   },
+   "exclusion blend mode":{
+      "prefix":"blend",
+      "body":[
+         "${1:mix}-blend-mode: exclusion"
+      ],
+      "description":"exclusion blend mode"
+   },
+   "hard-light blend mode":{
+      "prefix":"blend",
+      "body":[
+         "${1:mix}-blend-mode: hard-light"
+      ],
+      "description":"hard-light blend mode"
+   },
+   "soft-light blend mode":{
+      "prefix":"blend",
+      "body":[
+         "${1:mix}-blend-mode: soft-light"
+      ],
+      "description":"soft-light blend mode"
+   },
+   "multiply blend mode":{
+      "prefix":"blend",
+      "body":[
+         "${1:mix}-blend-mode: multiply"
+      ],
+      "description":"multiply blend mode"
+   },
+   "color-burn blend mode":{
+      "prefix":"blend",
+      "body":[
+         "${1:mix}-blend-mode: color-burn"
+      ],
+      "description":"color-burn blend mode"
+   },
+   "lighten blend mode":{
+      "prefix":"blend",
+      "body":[
+         "${1:mix}-blend-mode: lighten"
+      ],
+      "description":"lighten blend mode"
+   },
+   "saturation blend mode":{
+      "prefix":"blend",
+      "body":[
+         "${1:mix}-blend-mode: saturation"
+      ],
+      "description":"saturation blend mode"
+   },
+   "hue blend mode":{
+      "prefix":"blend",
+      "body":[
+         "${1:mix}-blend-mode: hue"
+      ],
+      "description":"hue blend mode"
+   },
+   "overlay blend mode":{
+      "prefix":"blend",
+      "body":[
+         "${1:mix}-blend-mode: overlay"
+      ],
+      "description":"overlay blend mode"
+   },
+   "color blend mode":{
+      "prefix":"blend",
+      "body":[
+         "${1:mix}-blend-mode: color"
+      ],
+      "description":"color blend mode"
+   },
+   "complementary 4 color":{
+      "prefix":"complementary",
+      "body":[
+         "hsl(hue(${1:color}),saturation(${1:color}),70)"
+      ],
+      "description":"complementary 4 color"
+   },
+   "darken SCSS":{
+      "prefix":"darken",
+      "body":[
+         "darken(${1:color}, ${2:percent}%)"
+      ],
+      "description":"darken SCSS"
+   },
+   "triad 2 color":{
+      "prefix":"triad",
+      "body":[
+         "adjust-hue(${1:color}, 240deg)"
+      ],
+      "description":"triad 2 color"
+   },
+   "complementary 3 color":{
+      "prefix":"complementary",
+      "body":[
+         "hsl(hue(${1:color}),saturation(${1:color}),30)"
+      ],
+      "description":"complementary 3 color"
+   },
+   "complementary 2 color":{
+      "prefix":"complementary",
+      "body":[
+         "hsl(hue(complement(${1:color})),saturation(${1:color}),70)"
+      ],
+      "description":"complementary 2 color"
+   },
+   "analogous 1 color":{
+      "prefix":"analogous",
+      "body":[
+         "adjust-hue(${1:color}, 45deg)"
+      ],
+      "description":"analogous 1 color"
+   },
+   "split 1 color":{
+      "prefix":"split",
+      "body":[
+         "adjust-hue(${1:color}, 150deg)"
+      ],
+      "description":"split 1 color"
+   },
+   "triad 1 color":{
+      "prefix":"triad",
+      "body":[
+         "adjust-hue(${1:color}, 120deg)"
+      ],
+      "description":"triad 1 color"
+   },
+   "lighten SCSS":{
+      "prefix":"lighten",
+      "body":[
+         "lighten(${1:color}, ${2:percent}%)"
+      ],
+      "description":"lighten SCSS"
+   },
+   "split 2 color":{
+      "prefix":"split",
+      "body":[
+         "adjust-hue(${1:color}, 210deg)"
+      ],
+      "description":"split 2 color"
+   },
+   "analogous 2 color":{
+      "prefix":"analogous",
+      "body":[
+         "adjust-hue(${1:color}, -45deg)"
+      ],
+      "description":"analogous 2 color"
+   },
+   "complementary 1 color":{
+      "prefix":"complementary",
+      "body":[
+         "complement(${1:color})"
+      ],
+      "description":"complementary 1 color"
+   },
+   "Palatino web font":{
+      "prefix":"sans",
+      "body":[
+         "'Palatino Linotype', 'Book Antiqua', Palatino, serif"
+      ],
+      "description":"Palatino web font"
+   },
+   "Helvetica Neue web font":{
+      "prefix":"sans",
+      "body":[
+         "'Helvetica Neue', Helvetica, Arial, sans-serif"
+      ],
+      "description":"Helvetica Neue web font"
+   },
+   "Baskerville web font":{
+      "prefix":"serif",
+      "body":[
+         "Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif"
+      ],
+      "description":"Baskerville web font"
+   },
+   "Rockwell web font":{
+      "prefix":"slab",
+      "body":[
+         "Rockwell, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman', serif"
+      ],
+      "description":"Rockwell web font"
+   },
+   "Futura web font":{
+      "prefix":"sans",
+      "body":[
+         "Futura, 'Trebuchet MS', Arial, sans-serif"
+      ],
+      "description":"Futura web font"
+   },
+   "Lucida web font":{
+      "prefix":"sans",
+      "body":[
+         "'Lucida Sans Unicode', 'Lucida Grande', sans-serif"
+      ],
+      "description":"Lucida web font"
+   },
+   "Courier New web font":{
+      "prefix":"monospace",
+      "body":[
+         "‘Courier New’, Courier, monospace"
+      ],
+      "description":"Courier New web font"
+   },
+   "System web fonts":{
+      "prefix":"system",
+      "body":[
+         "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", Helvetica Neue\", sans-serif;"
+      ],
+      "description":"System web fonts"
+   },
+   "Didot web font":{
+      "prefix":"serif",
+      "body":[
+         "Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif"
+      ],
+      "description":"Didot web font"
+   },
+   "Garamond web font, SCSS":{
+      "prefix":"serif",
+      "body":[
+         "Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif"
+      ],
+      "description":"Garamond web font, SCSS"
+   },
+   "Gill Sans web font":{
+      "prefix":"sans",
+      "body":[
+         "Gill Sans / Gill Sans MT, sans-serif"
+      ],
+      "description":"Gill Sans web font"
+   },
+   "Georgia web font":{
+      "prefix":"serif",
+      "body":[
+         "Georgia, Serif"
+      ],
+      "description":"Georgia web font"
+   },
+   "Century Gothic web font":{
+      "prefix":"sans",
+      "body":[
+         "'Century Gothic', CenturyGothic, AppleGothic, sans-serif"
+      ],
+      "description":"Century Gothic web font"
+   },
+   "sticky CSS object":{
+      "prefix":"sticky",
+      "body":[
+         "position: -webkit-sticky;",
+         "  position: sticky;",
+         "  top: ${1:0};"
+      ],
+      "description":"sticky CSS object"
+   },
+   "center children objects":{
+      "prefix":"center",
+      "body":[
+         "${1:// https://css-tricks.com/centering-the-newest-coolest-way-vs-the-oldest-coolest-way/",
+         "}display: grid;",
+         "height: 100vh;",
+         "margin: 0;",
+         "place-items: center center;"
+      ],
+      "description":"center children objects"
+   },
+   "h1.sublime-snippet":{
+      "prefix":"h1",
+      "body":[
+         "# ${1:Heading 1}",
+         "${0}"
+      ],
+      "description":"h1.sublime-snippet"
+   },
+   "h6.sublime-snippet":{
+      "prefix":"h6",
+      "body":[
+         "###### ${1:Heading 6}",
+         "${0}"
+      ],
+      "description":"h6.sublime-snippet"
+   },
+   "table.sublime-snippet":{
+      "prefix":"table",
+      "body":[
+         "| ${1:Column 1} | ${2:Column 2} |",
+         "| ------------- | ------------- |",
+         "| ${3:Cell 1-1} | ${4:Cell 1-2} |",
+         "| ${5:Cell 2-1} | ${6:Cell 2-2} |",
+         "${0}"
+      ],
+      "description":"table.sublime-snippet"
+   },
+   "code.sublime-snippet":{
+      "prefix":"code",
+      "body":[
+         "`${1:Inline Code Snippet}` ${0}"
+      ],
+      "description":"code.sublime-snippet"
+   },
+   "pre.sublime-snippet":{
+      "prefix":"pre",
+      "body":[
+         "```${1:language}",
+         "${2:Multi-line Code}",
+         "```",
+         "${0}"
+      ],
+      "description":"pre.sublime-snippet"
+   },
+   "strike.sublime-snippet":{
+      "prefix":"strike",
+      "body":[
+         "~~${1:Strike Through}~~ ${0}"
+      ],
+      "description":"strike.sublime-snippet"
+   },
+   "b.sublime-snippet":{
+      "prefix":"b",
+      "body":[
+         "**${1:Bold Text}** ${0}"
+      ],
+      "description":"b.sublime-snippet"
+   },
+   "bq.sublime-snippet":{
+      "prefix":"bq",
+      "body":[
+         "> ${1:Put a nice, beautiful}",
+         "> ${2:quote here...}",
+         "${0}"
+      ],
+      "description":"bq.sublime-snippet"
+   },
+   "h5.sublime-snippet":{
+      "prefix":"h5",
+      "body":[
+         "##### ${1:Heading 5}",
+         "${0}"
+      ],
+      "description":"h5.sublime-snippet"
+   },
+   "ul.sublime-snippet":{
+      "prefix":"ul",
+      "body":[
+         "- ${1:I}",
+         "- ${2:Love}",
+         "- ${3:Markdown}",
+         "${0}"
+      ],
+      "description":"ul.sublime-snippet"
+   },
+   "hr.sublime-snippet":{
+      "prefix":"hr",
+      "body":[
+         "---",
+         "${0}"
+      ],
+      "description":"hr.sublime-snippet"
+   },
+   "h2.sublime-snippet":{
+      "prefix":"h2",
+      "body":[
+         "## ${1:Heading 2}",
+         "${0}"
+      ],
+      "description":"h2.sublime-snippet"
+   },
+   "img.sublime-snippet":{
+      "prefix":"img",
+      "body":[
+         "![${1:Image Title}](${2:Image Source}) ${0}"
+      ],
+      "description":"img.sublime-snippet"
+   },
+   "i.sublime-snippet":{
+      "prefix":"i",
+      "body":[
+         "*${1:Italic Text}* ${0}"
+      ],
+      "description":"i.sublime-snippet"
+   },
+   "h3.sublime-snippet":{
+      "prefix":"h3",
+      "body":[
+         "### ${1:Heading 3}",
+         "${0}"
+      ],
+      "description":"h3.sublime-snippet"
+   },
+   "ol.sublime-snippet":{
+      "prefix":"ol",
+      "body":[
+         "1. ${1:First Item}",
+         "2. ${2:Second Item}",
+         "3. ${3:Third Item}",
+         "${0}"
+      ],
+      "description":"ol.sublime-snippet"
+   },
+   "h4.sublime-snippet":{
+      "prefix":"h4",
+      "body":[
+         "#### ${1:Heading 4}",
+         "${0}"
+      ],
+      "description":"h4.sublime-snippet"
+   },
+   "a.sublime-snippet":{
+      "prefix":"a",
+      "body":[
+         "[${1:Link Title}](${2:Link Source}) ${0}"
+      ],
+      "description":"a.sublime-snippet"
+   },
+   "every items":{
+      "prefix":"family",
+      "body":[
+         "+every($1)"
+      ],
+      "description":"every items"
+   },
+   "last-of items":{
+      "prefix":"family",
+      "body":[
+         "+last-of($1)"
+      ],
+      "description":"last-of items"
+   },
+   "not-unique items":{
+      "prefix":"family",
+      "body":[
+         "+not-unique"
+      ],
+      "description":"not-unique items"
+   },
+   "unique items":{
+      "prefix":"family",
+      "body":[
+         "+unique"
+      ],
+      "description":"unique items"
+   },
+   "from-first-last items":{
+      "prefix":"family",
+      "body":[
+         "+from-first-last($1)"
+      ],
+      "description":"from-first-last items"
+   },
+   "first-child items":{
+      "prefix":"family",
+      "body":[
+         "+first-child"
+      ],
+      "description":"first-child items"
+   },
+   "all-but-first-last items":{
+      "prefix":"family",
+      "body":[
+         "+all-but-first-last($1)"
+      ],
+      "description":"all-but-first-last items"
+   },
+   "from-end items":{
+      "prefix":"family",
+      "body":[
+         "+from-end($1)"
+      ],
+      "description":"from-end items"
+   },
+   "first items":{
+      "prefix":"family",
+      "body":[
+         "+first($1)"
+      ],
+      "description":"first items"
+   },
+   "odd-between items":{
+      "prefix":"family",
+      "body":[
+         "+odd-between($1, $2)"
+      ],
+      "description":"odd-between items"
+   },
+   "in-between items":{
+      "prefix":"family",
+      "body":[
+         "+in-between($1, $2)"
+      ],
+      "description":"in-between items"
+   },
+   "first-last items":{
+      "prefix":"family",
+      "body":[
+         "+first-last"
+      ],
+      "description":"first-last items"
+   },
+   "last items":{
+      "prefix":"family",
+      "body":[
+         "+last($1)"
+      ],
+      "description":"last items"
+   },
+   "last-child items":{
+      "prefix":"family",
+      "body":[
+         "+last-child"
+      ],
+      "description":"last-child items"
+   },
+   "at-least items":{
+      "prefix":"family",
+      "body":[
+         "+at-least($1)"
+      ],
+      "description":"at-least items"
+   },
+   "odd items":{
+      "prefix":"family",
+      "body":[
+         "+odd"
+      ],
+      "description":"odd items"
+   },
+   "all-but items":{
+      "prefix":"family",
+      "body":[
+         "+all-but($1)"
+      ],
+      "description":"all-but items"
+   },
+   "even items":{
+      "prefix":"family",
+      "body":[
+         "+even"
+      ],
+      "description":"even items"
+   },
+   "first-of items":{
+      "prefix":"family",
+      "body":[
+         "+first-of($1)"
+      ],
+      "description":"first-of items"
+   },
+   "n-between items":{
+      "prefix":"family",
+      "body":[
+         "// This mixin uses 3 arguments, the first one is equal to N item,",
+         "// the second is the starting item and the third the end item.",
+         "+n-between($1, $2, $3)"
+      ],
+      "description":"n-between items"
+   },
+   "middle items":{
+      "prefix":"family",
+      "body":[
+         "+middle($1)"
+      ],
+      "description":"middle items"
+   },
+   "between items":{
+      "prefix":"family",
+      "body":[
+         "+between($1, $2)"
+      ],
+      "description":"between items"
+   },
+   "even-between items":{
+      "prefix":"family",
+      "body":[
+         "+even-between($1, $2)"
+      ],
+      "description":"even-between items"
+   },
+   "after-first items":{
+      "prefix":"family",
+      "body":[
+         "+after-first($1)"
+      ],
+      "description":"after-first items"
+   },
+   "at-most items":{
+      "prefix":"family",
+      "body":[
+         "+at-most($1)"
+      ],
+      "description":"at-most items"
+   },
+   "bounce animation":{
+      "prefix":"bounce",
+      "body":[
+         "+bounce"
+      ],
+      "description":"bounce animation"
+   },
+   "shake animation":{
+      "prefix":"shake",
+      "body":[
+         "+shake"
+      ],
+      "description":"shake animation"
+   },
+   "tada animation":{
+      "prefix":"tada",
+      "body":[
+         "+tada"
+      ],
+      "description":"tada animation"
+   },
+   "swing animation":{
+      "prefix":"swing",
+      "body":[
+         "+swing"
+      ],
+      "description":"swing animation"
+   },
+   "wobble animation":{
+      "prefix":"wobble",
+      "body":[
+         "+wobble"
+      ],
+      "description":"wobble animation"
+   },
+   "jello animation":{
+      "prefix":"jello",
+      "body":[
+         "+jello"
+      ],
+      "description":"jello animation"
+   },
+   "pulse animation":{
+      "prefix":"pulse",
+      "body":[
+         "+pulse"
+      ],
+      "description":"pulse animation"
+   },
+   "flash animation":{
+      "prefix":"flash",
+      "body":[
+         "+flash"
+      ],
+      "description":"flash animation"
+   },
+   "rubberBand animation":{
+      "prefix":"rubberBand",
+      "body":[
+         "+rubberBand"
+      ],
+      "description":"rubberBand animation"
+   },
+   "flipOutX animation":{
+      "prefix":"flipOutX",
+      "body":[
+         "+flipOutX"
+      ],
+      "description":"flipOutX animation"
+   },
+   "flipOutY animation":{
+      "prefix":"flipOutY",
+      "body":[
+         "+flipOutY"
+      ],
+      "description":"flipOutY animation"
+   },
+   "flipInY animation":{
+      "prefix":"flipInY",
+      "body":[
+         "+flipInY"
+      ],
+      "description":"flipInY animation"
+   },
+   "flip animation":{
+      "prefix":"flip",
+      "body":[
+         "+flip"
+      ],
+      "description":"flip animation"
+   },
+   "flipInX animation":{
+      "prefix":"flipInX",
+      "body":[
+         "+flipInX"
+      ],
+      "description":"flipInX animation"
+   },
+   "slideOutUp animation":{
+      "prefix":"slideOutUp",
+      "body":[
+         "+slideOutUp"
+      ],
+      "description":"slideOutUp animation"
+   },
+   "slideInUp animation":{
+      "prefix":"slideInUp",
+      "body":[
+         "+slideInUp"
+      ],
+      "description":"slideInUp animation"
+   },
+   "slideOutLeft animation":{
+      "prefix":"slideOutLeft",
+      "body":[
+         "+slideOutLeft"
+      ],
+      "description":"slideOutLeft animation"
+   },
+   "slideOutRight animation":{
+      "prefix":"slideOutRight",
+      "body":[
+         "+slideOutRight"
+      ],
+      "description":"slideOutRight animation"
+   },
+   "slideOutDown animation":{
+      "prefix":"slideOutDown",
+      "body":[
+         "+slideOutDown"
+      ],
+      "description":"slideOutDown animation"
+   },
+   "slideInRight animation":{
+      "prefix":"slideInRight",
+      "body":[
+         "+slideInRight"
+      ],
+      "description":"slideInRight animation"
+   },
+   "slideInLeft animation":{
+      "prefix":"slideInLeft",
+      "body":[
+         "+slideInLeft"
+      ],
+      "description":"slideInLeft animation"
+   },
+   "slideInDown animation":{
+      "prefix":"slideInDown",
+      "body":[
+         "+slideInDown"
+      ],
+      "description":"slideInDown animation"
+   },
+   "rotateOutUpRight animation":{
+      "prefix":"rotateOutUpRight",
+      "body":[
+         "+rotateOutUpRight"
+      ],
+      "description":"rotateOutUpRight animation"
+   },
+   "rotateOutUpLeft animation":{
+      "prefix":"rotateOutUpLeft",
+      "body":[
+         "+rotateOutUpLeft"
+      ],
+      "description":"rotateOutUpLeft animation"
+   },
+   "rotateOutDownRight animation":{
+      "prefix":"rotateOutDownRight",
+      "body":[
+         "+rotateOutDownRight"
+      ],
+      "description":"rotateOutDownRight animation"
+   },
+   "rotateOutDownLeft animation":{
+      "prefix":"rotateOutDownLeft",
+      "body":[
+         "+rotateOutDownLeft"
+      ],
+      "description":"rotateOutDownLeft animation"
+   },
+   "rotateInUpRight animation":{
+      "prefix":"rotateInUpRight",
+      "body":[
+         "+rotateInUpRight"
+      ],
+      "description":"rotateInUpRight animation"
+   },
+   "rotateIn animation":{
+      "prefix":"rotateIn",
+      "body":[
+         "+rotateIn"
+      ],
+      "description":"rotateIn animation"
+   },
+   "rotateInUpLeft animation":{
+      "prefix":"rotateInUpLeft",
+      "body":[
+         "+rotateInUpLeft"
+      ],
+      "description":"rotateInUpLeft animation"
+   },
+   "rotateOut animation":{
+      "prefix":"rotateOut",
+      "body":[
+         "+rotateOut"
+      ],
+      "description":"rotateOut animation"
+   },
+   "rotateInDownRight animation":{
+      "prefix":"rotateInDownRight",
+      "body":[
+         "+rotateInDownRight"
+      ],
+      "description":"rotateInDownRight animation"
+   },
+   "rotateInDownLeft animation":{
+      "prefix":"rotateInDownLeft",
+      "body":[
+         "+rotateInDownLeft"
+      ],
+      "description":"rotateInDownLeft animation"
+   },
+   "lightSpeedIn animation":{
+      "prefix":"lightSpeedIn",
+      "body":[
+         "+lightSpeedIn"
+      ],
+      "description":"lightSpeedIn animation"
+   },
+   "lightSpeedOut animation":{
+      "prefix":"lightSpeedOut",
+      "body":[
+         "+lightSpeedOut"
+      ],
+      "description":"lightSpeedOut animation"
+   },
+   "rollOut animation":{
+      "prefix":"rollOut",
+      "body":[
+         "+rollOut"
+      ],
+      "description":"rollOut animation"
+   },
+   "rollIn animation":{
+      "prefix":"rollIn",
+      "body":[
+         "+rollIn"
+      ],
+      "description":"rollIn animation"
+   },
+   "hinge animation":{
+      "prefix":"hinge",
+      "body":[
+         "+hinge"
+      ],
+      "description":"hinge animation"
+   },
+   "fadeIn animation":{
+      "prefix":"fadeIn",
+      "body":[
+         "+fadeIn"
+      ],
+      "description":"fadeIn animation"
+   },
+   "fadeOut animation":{
+      "prefix":"fadeOut",
+      "body":[
+         "+fadeOut"
+      ],
+      "description":"fadeOut animation"
+   },
+   "fadeOutUpBig animation":{
+      "prefix":"fadeOutUpBig",
+      "body":[
+         "+fadeOutUpBig"
+      ],
+      "description":"fadeOutUpBig animation"
+   },
+   "fadeOutRight animation":{
+      "prefix":"fadeOutRight",
+      "body":[
+         "+fadeOutRight"
+      ],
+      "description":"fadeOutRight animation"
+   },
+   "fadeOutDownBig animation":{
+      "prefix":"fadeOutDownBig",
+      "body":[
+         "+fadeOutDownBig"
+      ],
+      "description":"fadeOutDownBig animation"
+   },
+   "fadeOutLeftBig animation":{
+      "prefix":"fadeOutLeftBig",
+      "body":[
+         "+fadeOutLeftBig"
+      ],
+      "description":"fadeOutLeftBig animation"
+   },
+   "fadeInUp animation":{
+      "prefix":"fadeInUp",
+      "body":[
+         "+fadeInUp"
+      ],
+      "description":"fadeInUp animation"
+   },
+   "fadeInRightBig animation":{
+      "prefix":"fadeInRightBig",
+      "body":[
+         "+fadeInRightBig"
+      ],
+      "description":"fadeInRightBig animation"
+   },
+   "fadeOutDown animation":{
+      "prefix":"fadeOutDown",
+      "body":[
+         "+fadeOutDown"
+      ],
+      "description":"fadeOutDown animation"
+   },
+   "fadeInLeft animation":{
+      "prefix":"fadeInLeft",
+      "body":[
+         "+fadeInLeft"
+      ],
+      "description":"fadeInLeft animation"
+   },
+   "fadeInLeftBig animation":{
+      "prefix":"fadeInLeftBig",
+      "body":[
+         "+fadeInLeftBig"
+      ],
+      "description":"fadeInLeftBig animation"
+   },
+   "fadeInDown animation":{
+      "prefix":"fadeInDown",
+      "body":[
+         "+fadeInDown"
+      ],
+      "description":"fadeInDown animation"
+   },
+   "fadeInDownBig animation":{
+      "prefix":"fadeInDownBig",
+      "body":[
+         "+fadeInDownBig"
+      ],
+      "description":"fadeInDownBig animation"
+   },
+   "fadeOutLeft animation":{
+      "prefix":"fadeOutLeft",
+      "body":[
+         "+fadeOutLeft"
+      ],
+      "description":"fadeOutLeft animation"
+   },
+   "fadeInRight animation":{
+      "prefix":"fadeInRight",
+      "body":[
+         "+fadeInRight"
+      ],
+      "description":"fadeInRight animation"
+   },
+   "fadeInUpBig animation":{
+      "prefix":"fadeInUpBig",
+      "body":[
+         "+fadeInUpBig"
+      ],
+      "description":"fadeInUpBig animation"
+   },
+   "fadeOutUp animation":{
+      "prefix":"fadeOutUp",
+      "body":[
+         "+fadeOutUp"
+      ],
+      "description":"fadeOutUp animation"
+   },
+   "fadeOutRightBig animation":{
+      "prefix":"fadeOutRightBig",
+      "body":[
+         "+fadeOutRightBig"
+      ],
+      "description":"fadeOutRightBig animation"
+   },
+   "zoomOutUp animation":{
+      "prefix":"zoomOutUp",
+      "body":[
+         "+zoomOutUp"
+      ],
+      "description":"zoomOutUp animation"
+   },
+   "zoomOutRight animation":{
+      "prefix":"zoomOutRight",
+      "body":[
+         "+zoomOutRight"
+      ],
+      "description":"zoomOutRight animation"
+   },
+   "zoomInDown animation":{
+      "prefix":"zoomInDown",
+      "body":[
+         "+zoomInDown"
+      ],
+      "description":"zoomInDown animation"
+   },
+   "zoomInLeft animation":{
+      "prefix":"zoomInLeft",
+      "body":[
+         "+zoomInLeft"
+      ],
+      "description":"zoomInLeft animation"
+   },
+   "zoomIn animation":{
+      "prefix":"zoomIn",
+      "body":[
+         "+zoomIn"
+      ],
+      "description":"zoomIn animation"
+   },
+   "zoomOutLeft animation":{
+      "prefix":"zoomOutLeft",
+      "body":[
+         "+zoomOutLeft"
+      ],
+      "description":"zoomOutLeft animation"
+   },
+   "zoomInUp animation":{
+      "prefix":"zoomInUp",
+      "body":[
+         "+zoomInUp"
+      ],
+      "description":"zoomInUp animation"
+   },
+   "zoomOutDown animation":{
+      "prefix":"zoomOutDown",
+      "body":[
+         "+zoomOutDown"
+      ],
+      "description":"zoomOutDown animation"
+   },
+   "zoomOut animation":{
+      "prefix":"zoomOut",
+      "body":[
+         "+zoomOut"
+      ],
+      "description":"zoomOut animation"
+   },
+   "zoomInRight animation":{
+      "prefix":"zoomInRight",
+      "body":[
+         "+zoomInRight"
+      ],
+      "description":"zoomInRight animation"
+   },
+   "translate 3D transform":{
+      "prefix":"translate",
+      "body":[
+         "+translate(${1:x}, ${2:y}, ${3:z}, 3d)"
+      ],
+      "description":"translate 3D transform"
+   },
+   "animate mixin":{
+      "prefix":"animate",
+      "body":[
+         "=${1:animation name}(\\$duration: \\$animation-duration, \\$function: \\$animation-function, \\$delay: \\$animation-delay, \\$count: \\$animation-count, \\$fill: \\$animation-fill, \\$visibility: \\$animation-visibility)",
+         "  +animation(${1:animation name} \\$duration \\$function \\$delay \\$count \\$fill)",
+         "  +visibility(\\$visibility)",
+         "  @at-root",
+         "    +keyframes(${1:animation name})",
+         "      0%",
+         "       ${2:initial state}",
+         "      100%",
+         "       ${3:final state}"
+      ],
+      "description":"animate mixin"
+   },
+   "rotate transform":{
+      "prefix":"rotate",
+      "body":[
+         "+rotate(${1:0})"
+      ],
+      "description":"rotate transform"
+   },
+   "scale transform":{
+      "prefix":"scale",
+      "body":[
+         "+scale(${1:0})"
+      ],
+      "description":"scale transform"
+   },
+   "animate variables":{
+      "prefix":"variables",
+      "body":[
+         "\\$animation-duration: {$1:1s} !default;",
+         "\\$animation-function: {$2:ease} !default;",
+         "\\$animation-delay: {$3:0.2s} !default;",
+         "\\$animation-count: {$4:1} !default;",
+         "\\$animation-fill: {$5:both} !default;",
+         "\\$animation-visibility: {$6:hidden} !default;"
+      ],
+      "description":"animate variables"
+   },
+   "skew transform":{
+      "prefix":"skew",
+      "body":[
+         "+skew(${1:0})"
+      ],
+      "description":"skew transform"
+   },
+   "translate transform":{
+      "prefix":"translate",
+      "body":[
+         "+translate(${1:x}, ${2:y})"
+      ],
+      "description":"translate transform"
+   },
+   "bounceIn animation":{
+      "prefix":"bounceIn",
+      "body":[
+         "+bounceIn"
+      ],
+      "description":"bounceIn animation"
+   },
+   "bounceInLeft animation":{
+      "prefix":"bounceInLeft",
+      "body":[
+         "+bounceInLeft"
+      ],
+      "description":"bounceInLeft animation"
+   },
+   "bounceInUp animation":{
+      "prefix":"bounceInUp",
+      "body":[
+         "+bounceInUp"
+      ],
+      "description":"bounceInUp animation"
+   },
+   "bounceOutUp animation":{
+      "prefix":"bounceOutUp",
+      "body":[
+         "+bounceOutUp"
+      ],
+      "description":"bounceOutUp animation"
+   },
+   "bounceInRight animation":{
+      "prefix":"bounceInRight",
+      "body":[
+         "+bounceInRight"
+      ],
+      "description":"bounceInRight animation"
+   },
+   "bounceOutLeft animation":{
+      "prefix":"bounceOutLeft",
+      "body":[
+         "+bounceOutLeft"
+      ],
+      "description":"bounceOutLeft animation"
+   },
+   "bounceInDown animation":{
+      "prefix":"bounceInDown",
+      "body":[
+         "+bounceInDown"
+      ],
+      "description":"bounceInDown animation"
+   },
+   "bounceOutRight animation":{
+      "prefix":"bounceOutRight",
+      "body":[
+         "+bounceOutRight"
+      ],
+      "description":"bounceOutRight animation"
+   },
+   "bounceOutDown animation":{
+      "prefix":"bounceOutDown",
+      "body":[
+         "+bounceOutDown"
+      ],
+      "description":"bounceOutDown animation"
+   },
+   "bounceOut animation":{
+      "prefix":"bounceOut",
+      "body":[
+         "+bounceOut"
+      ],
+      "description":"bounceOut animation"
+   },
+   "CSS link":{
+      "prefix":"css",
+      "body":[
+         "<link rel=\"stylesheet\" href=\"${1:css/style}.css\">"
+      ],
+      "description":"CSS link"
+   },
+   "dashed comment block":{
+      "prefix":"comment",
+      "body":[
+         "//----------------------------------------------------------------------------------",
+         "// $1",
+         "//----------------------------------------------------------------------------------",
+         "$0"
+      ],
+      "description":"dashed comment block"
+   },
+   "CSS inline":{
+      "prefix":"css",
+      "body":[
+         "<style type=\"text/css\">",
+         "$1",
+         "</style>"
+      ],
+      "description":"CSS inline"
+   },
+   "redirect to page":{
+      "prefix":"redirect",
+      "body":[
+         "<meta http-equiv=\"refresh\" content=\"${1:0}; url=${2:URLPATH}\" />"
+      ],
+      "description":"redirect to page"
+   },
+   "prevent zoom":{
+      "prefix":"viewport",
+      "body":[
+         "<meta name=\"viewport\" content=\"width=device-width, user-scalable=no\" />"
+      ],
+      "description":"prevent zoom"
+   },
+   "normal comment block":{
+      "prefix":"comment",
+      "body":[
+         "//==================================================================================",
+         "// $1",
+         "//==================================================================================",
+         "$0"
+      ],
+      "description":"normal comment block"
+   },
+   "regex for IPv6 address":{
+      "prefix":"regex",
+      "body":[
+         "(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))"
+      ],
+      "description":"regex for IPv6 address"
+   },
+   "regex for password strength":{
+      "prefix":"regex",
+      "body":[
+         "^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$"
+      ],
+      "description":"regex for password strength"
+   },
+   "regex for 12 bit color strings":{
+      "prefix":"regex",
+      "body":[
+         "([[:xdigit:]])([[:xdigit:]])([[:xdigit:]])([^[:xdigit:]])"
+      ],
+      "description":"regex for 12 bit color strings"
+   },
+   "regex for http prepend on hyperlink":{
+      "prefix":"regex",
+      "body":[
+         "if (!s.match(/^[a-zA-Z]+:\\/\\//))",
+         "{",
+         "    s = 'http://' + s;",
+         "}"
+      ],
+      "description":"regex for http prepend on hyperlink"
+   },
+   "regex for hexadecimal color":{
+      "prefix":"regex",
+      "body":[
+         "\\#([a-fA-F]|[0-9]){3, 6}"
+      ],
+      "description":"regex for hexadecimal color"
+   },
+   "regex for pull domain from URL":{
+      "prefix":"regex",
+      "body":[
+         "/https?:\\/\\/(?:[-\\w]+\\.)?([-\\w]+)\\.\\w+(?:\\.\\w+)?\\/?.*/i"
+      ],
+      "description":"regex for pull domain from URL"
+   },
+   "regex to find any attribute with unit":{
+      "prefix":"regex",
+      "body":[
+         "[[:alpha:]]+(-[[:alpha:]]+)*\\s*:\\s*-?([[:digit:]]*)?\\.?[[:digit:]]+(${1:px})"
+      ],
+      "description":"regex to find any attribute with unit"
+   },
+   "regex for anything inside quotes":{
+      "prefix":"regex",
+      "body":[
+         "\"([^\"]*)\""
+      ],
+      "description":"regex for anything inside quotes"
+   },
+   "regex for thousands separator":{
+      "prefix":"regex",
+      "body":[
+         "/\\d{1,3}(?=(\\d{3})+(?!\\d))/g"
+      ],
+      "description":"regex for thousands separator"
+   },
+   "regex for email validation":{
+      "prefix":"regex",
+      "body":[
+         "/[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}/igm"
+      ],
+      "description":"regex for email validation"
+   },
+   "regex for IPv4 address":{
+      "prefix":"regex",
+      "body":[
+         "/\\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\b/"
+      ],
+      "description":"regex for IPv4 address"
+   },
+   "LinkedIn share HTML link":{
+      "prefix":"linkedin",
+      "body":[
+         "<a href=\"https://www.linkedin.com/shareArticle?mini=true&url=${1:http://www.nicholasfrota.com}&title=${2:Nicholas Frota}&source=${3:http://www.nicholasfrota.com}&summary=${4:Short Summary}",
+         "  target=\"_blank\">",
+         "  ${5:<i class=\"fa fa-linkedin\"></i>}",
+         " </a>"
+      ],
+      "description":"LinkedIn share HTML link"
+   },
+   "Reddit share HTML link":{
+      "prefix":"reddit",
+      "body":[
+         "<a href=\"http://www.reddit.com/submit/?url=${1:http://www.nicholasfrota.com}\"",
+         "   target=\"_blank\">",
+         "  ${2:<i class=\"fa fa-reddit\"></i>}",
+         " </a>"
+      ],
+      "description":"Reddit share HTML link"
+   },
+   "Google Analytics code":{
+      "prefix":"analytics",
+      "body":[
+         "${2:<!-- Global site tag (gtag.js) - Google Analytics -->",
+         "}<script async src=\"https://www.googletagmanager.com/gtag/js?id=${1:UA-XXXXX-X}\"></script>",
+         "<script>",
+         "  window.dataLayer = window.dataLayer || [];",
+         "  function gtag(){dataLayer.push(arguments);}",
+         "  gtag('js', new Date());",
+         "",
+         "  gtag('config', '${1:UA-XXXXX-X}');",
+         "</script>"
+      ],
+      "description":"Google Analytics code"
+   },
+   "Twitter share HTML link":{
+      "prefix":"twitter",
+      "body":[
+         "<a href=\"http://twitter.com/home?status=${1:Visit my website} ${2:http://www.nicholasfrota.com} ${3:@nonlinear}\"",
+         " target=\"_blank\">",
+         " ${4:<i class=\"fa fa-twitter\"></i>}",
+         "</a>"
+      ],
+      "description":"Twitter share HTML link"
+   },
+   "Pinterest share HTML link":{
+      "prefix":"pinterest",
+      "body":[
+         "<a href=\"https://www.pinterest.com/pin/create/button/?url=${1:http://www.nicholasfrota.com}&media=${2:image URL}&description=${3:Short description}&hashtags=${4:tag,tag}\"",
+         "   target=\"_blank\">",
+         "  ${5:<i class=\"fa fa-pinterest\"></i>}",
+         " </a>"
+      ],
+      "description":"Pinterest share HTML link"
+   },
+   "Facebook share HTML link":{
+      "prefix":"facebook",
+      "body":[
+         "<a href=\"https://www.facebook.com/sharer/sharer.php?u=${1:http://www.nicholasfrota.com}\"",
+         " target=\"_blank\">",
+         " ${2:<i class=\"fa fa-facebook\"></i>}",
+         "</a>"
+      ],
+      "description":"Facebook share HTML link"
+   },
+   "Google share HTML link":{
+      "prefix":"google",
+      "body":[
+         "<a href=\"https://plus.google.com/share?url=${1:http://www.nicholasfrota.com}\"",
+         "  target=\"_blank\">",
+         " ${2:<i class=\"fa fa-google-plus\"></i>}",
+         "</a>"
+      ],
+      "description":"Google share HTML link"
+   },
+   "email share HTML Link":{
+      "prefix":"email",
+      "body":[
+         "${4:<!-- use %0D%0A for line breaks -->",
+         "}<a href=\"mailto:?subject=${1:subject}&body=${2:content and link}\">",
+         "  ${3:<i class=\"fa fa-envelope-o\"></i>}",
+         "</a>"
+      ],
+      "description":"email share HTML Link"
+   },
+   "CDN for detectizr":{
+      "prefix":"cdn",
+      "body":[
+         "<script src=\"https://raw.githubusercontent.com/barisaydinoglu/Detectizr/master/dist/detectizr.js\"></script>"
+      ],
+      "description":"CDN for detectizr"
+   },
+   "D3 CDN":{
+      "prefix":"cdn",
+      "body":[
+         "<script src=\"https://d3js.org/d3.v4.min.js\"></script>"
+      ],
+      "description":"D3 CDN"
+   },
+   "jQuery CDN":{
+      "prefix":"cdn",
+      "body":[
+         "<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\" integrity=\"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=\" crossorigin=\"anonymous\"></script>"
+      ],
+      "description":"jQuery CDN"
+   },
+   "CDN for modernizr":{
+      "prefix":"cdn",
+      "body":[
+         "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js\"></script>"
+      ],
+      "description":"CDN for modernizr"
+   },
+   "opacity mixin":{
+      "prefix":"opacity",
+      "body":[
+         "+opacity(${1:40})"
+      ],
+      "description":"opacity mixin"
+   },
+   "irregular radius mixin":{
+      "prefix":"radius",
+      "body":[
+         "+radius(${1:5px}, ${2:5px}, ${3:5px}, ${4:5px}, irregular)"
+      ],
+      "description":"irregular radius mixin"
+   },
+   "word-wrap mixin":{
+      "prefix":"word-wrap",
+      "body":[
+         "+word-wrap"
+      ],
+      "description":"word-wrap mixin"
+   },
+   "placeholder rules":{
+      "prefix":"placeholder",
+      "body":[
+         "+placeholder",
+         "  $1"
+      ],
+      "description":"placeholder rules"
+   },
+   "find mixin":{
+      "prefix":"find",
+      "body":[
+         "+find(${1:red})"
+      ],
+      "description":"find mixin"
+   },
+   "reset mixin":{
+      "prefix":"reset",
+      "body":[
+         "+reset(${1:all|list|border|bg|padding|margin})"
+      ],
+      "description":"reset mixin"
+   },
+   "ellipsis mixin":{
+      "prefix":"ellipsis",
+      "body":[
+         "+ellipsis"
+      ],
+      "description":"ellipsis mixin"
+   },
+   "shadow mixin":{
+      "prefix":"shadow",
+      "body":[
+         "+shadow(${1:box|text}, ${2:0} ${3:1px} ${4:3px} rgba(${5:0}, ${6:0}, ${7:0}, ${8:0.25}))"
+      ],
+      "description":"shadow mixin"
+   },
+   "transition mixin":{
+      "prefix":"transition",
+      "body":[
+         "+transition"
+      ],
+      "description":"transition mixin"
+   },
+   "clearfix mixins":{
+      "prefix":"clearfix",
+      "body":[
+         "+clearfix"
+      ],
+      "description":"clearfix mixins"
+   },
+   "map SCSS object":{
+      "prefix":"map",
+      "body":[
+         "\\$${1:group}: (",
+         "\t${2:name}: ${3:value},",
+         "\t${4:name}: ${5:value},",
+         "\t${6:name}: ${7:value}",
+         ");"
+      ],
+      "description":"map SCSS object"
+   },
+   "font-face mixin":{
+      "prefix":"font-face",
+      "body":[
+         "${2:// Alert: if font path is NOT `../fonts/`, define $path too.",
+         "}+font-face(${1:font title})"
+      ],
+      "description":"font-face mixin"
+   },
+   "hide-text mixin":{
+      "prefix":"hide-text",
+      "body":[
+         "+hide-text"
+      ],
+      "description":"hide-text mixin"
+   },
+   "mixin base rules":{
+      "prefix":"mixin",
+      "body":[
+         "// (`ㅅ`)づ base mixins",
+         "",
+         "\\$prefixes: webkit moz ms o;",
+         "",
+         "// Mixin to prefix several properties at once",
+         "// https://css-tricks.com/snippets/sass/mixin-prefix-properties/",
+         "",
+         "@mixin prefix(\\$declarations, \\$prefixes: ()) {",
+         "  @each \\$property, \\$value in \\$declarations {",
+         "    @each \\$prefix in \\$prefixes {",
+         "      #{'-' + \\$prefix + '-' + \\$property}: \\$value;",
+         "    }",
+         "    // Output standard non-prefixed declaration",
+         "    #{\\$property}: \\$value;",
+         "  }",
+         "}",
+         "",
+         "@mixin transition(\\$prop: all, \\$time: 300ms, \\$ease: ease-out) {",
+         "  @if \\$prop == disable {",
+         "    @include prefix((",
+         "    transition: none",
+         "  ), \\$prefixes);",
+         "  }",
+         "  @else {",
+         "    @include prefix((",
+         "      transition: \\$prop \\$time \\$ease",
+         "    ), \\$prefixes);",
+         "  }",
+         "}",
+         "",
+         "@mixin find(\\$color: red) {",
+         "  outline: dashed 1px \\$color;",
+         "}",
+         "",
+         "@mixin border-box(\\$mode: border-box) {",
+         "   @include prefix((",
+         "      box-sizing: \\$mode",
+         "    ), \\$prefixes);",
+         "}",
+         "",
+         "@mixin radius(\\$radius-1: 5px, \\$radius-2: 5px, \\$radius-3: 5px, \\$radius-4: 5px, \\$mode: regular) {",
+         "  @if \\$mode == regular {",
+         "    @include prefix((",
+         "    border-radius: \\$radius-1",
+         "    ), \\$prefixes);",
+         "        -moz-background-clip: padding;",
+         "    -webkit-background-clip: padding-box;",
+         "    background-clip: padding-box;",
+         "  }",
+         "  @else {",
+         "    -webkit-border-top-right-radius: \\$radius-2;",
+         "    -webkit-border-bottom-right-radius: \\$radius-3;",
+         "    -webkit-border-bottom-left-radius: \\$radius-4;",
+         "    -webkit-border-top-left-radius: \\$radius-1;",
+         "    -moz-border-radius-topright: \\$radius-2;",
+         "    -moz-border-radius-bottomright: \\$radius-3;",
+         "    -moz-border-radius-bottomleft: \\$radius-4;",
+         "    -moz-border-radius-topleft: \\$radius-1;",
+         "    border-top-right-radius: \\$radius-2;",
+         "    border-bottom-right-radius: \\$radius-3;",
+         "    border-bottom-left-radius: \\$radius-4;",
+         "    border-top-left-radius: \\$radius-1;",
+         "  }",
+         "}",
+         "",
+         "@mixin shadow(\\$mode: box, \\$shadow: 0 1px 3px rgba(0, 0, 0, 0.25)) {",
+         "  @if \\$mode == text {",
+         "     @include prefix((",
+         "        text-shadow: \\$shadow",
+         "      ), \\$prefixes);",
+         "  }",
+         "  @else {",
+         "     @include prefix((",
+         "        box-shadow: \\$shadow",
+         "      ), \\$prefixes);",
+         "  }",
+         "}",
+         "",
+         "@mixin opacity(\\$opacity: 40) {",
+         "  opacity: \\$opacity / 100;",
+         "  filter: \"alpha(opacity=#{\\$opacity})\";",
+         "  -khtml-opacity: \\$opacity / 100;",
+         "  -moz-opacity: \\$opacity / 100;",
+         "}",
+         "",
+         "@mixin reset(\\$type: all) {",
+         "  @if \\$type == margin {",
+         "    margin: 0px !important;",
+         "  }",
+         "  @else if \\$type == padding {",
+         "    padding: 0px !important;",
+         "  }",
+         "  @else if \\$type == border {",
+         "    border: none;",
+         "  }",
+         "  @else if \\$type == bg {",
+         "    background: transparent;",
+         "  }",
+         "  @else if \\$type == list {",
+         "    list-style: none;",
+         "  }",
+         "  @else if \\$type == select {",
+         "    -moz-appearance: none;",
+         "    -webkit-appearance: none;",
+         "  }",
+         "  @else if \\$type == shadow {",
+         "    @include shadow(normal, none);",
+         "  }",
+         "  @else if \\$type == outline {",
+         "    outline-width: 0;",
+         "    outline: none !important;",
+         "    outline-color: transparent;",
+         "    outline-style: none;",
+         "  }",
+         "  @else if \\$type == shadow-text {",
+         "    @include shadow(text, none);",
+         "  }",
+         "  @else if \\$type == number {",
+         "    &[type=number]::-webkit-inner-spin-button, &[type=number]::-webkit-outer-spin-button {",
+         "      -webkit-appearance: none;",
+         "      -moz-appearance: none;",
+         "      appearance: none;",
+         "      margin: 0;",
+         "    }",
+         "  }",
+         "  @else {",
+         "    margin: 0px !important;",
+         "    padding: 0px !important;",
+         "    border: none;",
+         "    background: transparent;",
+         "",
+         "    &:focus {",
+         "      outline-width: 0;",
+         "      outline: none;",
+         "      outline-color: transparent;",
+         "      outline-style: none;",
+         "    }",
+         "  }",
+         "}",
+         "",
+         "@mixin clearfix {",
+         "  zoom: 1;",
+         "  &:before,",
+         "  &:after {",
+         "    display: table;",
+         "    content: \"\";",
+         "  }",
+         "  &:after {",
+         "    clear: both;",
+         "  }",
+         "}",
+         "",
+         "// (`ㅅ`)づ animation mixins",
+         "",
+         "@mixin rotate(\\$rotate: 0) {",
+         "   @include prefix((",
+         "      transform: rotate(\\$rotate + deg)",
+         "    ), \\$prefixes);",
+         "}",
+         "",
+         "@mixin scale(\\$scale: 1) {",
+         "   @include prefix((",
+         "      transform: scale(\\$scale)",
+         "    ), \\$prefixes);",
+         "}",
+         "",
+         "@mixin skew(\\$skew: 0) {",
+         "   @include prefix((",
+         "      transform: skew(\\$skew + deg)",
+         "    ), \\$prefixes);",
+         "}",
+         "",
+         "@mixin translate(\\$x: 0, \\$y: 0, \\$z: 0, \\$type: other) {",
+         "  @if \\$type == 3d {",
+         "     @include prefix((",
+         "        transform: translate3d(\\$x + px, \\$y + px, \\$z + px)",
+         "      ), \\$prefixes);",
+         "  }",
+         "  @else {",
+         "     @include prefix((",
+         "        transform: translate(\\$x + px, \\$y + px)",
+         "      ), \\$prefixes);",
+         "  }",
+         "}",
+         "",
+         "// (`ㅅ`)づ forms mixins",
+         "",
+         "@mixin disable(\\$type: link) {",
+         "  @if \\$type == \"select\" {",
+         "     @include prefix((",
+         "        user-select: none",
+         "      ), moz webkit ms);",
+         "  }",
+         "  @else if \\$type == \"drag\" {",
+         "     @include prefix((",
+         "        user-drag: none",
+         "      ), webkit);",
+         "  }",
+         "  @else if \\$type == \"link\" {",
+         "    pointer-events: none;",
+         "    cursor: default;",
+         "  }",
+         "}",
+         "",
+         "@mixin placeholder(\\$animate: true) {",
+         "  &.placeholder {",
+         "    @content;",
+         "  }",
+         "  &::-webkit-input-placeholder {",
+         "    @content;",
+         "  }",
+         "  &:-moz-placeholder {",
+         "    @content;",
+         "  }",
+         "  &::-moz-placeholder {",
+         "    @content;",
+         "  }",
+         "  &:-ms-input-placeholder {",
+         "    @content;",
+         "  }",
+         "  @if \\$animate == \"true\" {",
+         "    &:focus::-webkit-input-placeholder {",
+         "      transition: all 0.5s 0.1s ease;",
+         "      text-indent: -50%;",
+         "      opacity: 0;",
+         "    }",
+         "  }",
+         "}",
+         "",
+         "// (`ㅅ`)づ typography mixins",
+         "",
+         "@mixin word-wrap {",
+         "  word-break: break-word;",
+         "   @include prefix((",
+         "      hyphens: auto",
+         "    ), webkit moz);",
+         "}",
+         "",
+         "@mixin ellipsis {",
+         "  overflow: hidden;",
+         "  white-space: nowrap;",
+         "  text-overflow: ellipsis;",
+         "}",
+         "",
+         "@mixin hide-text {",
+         "  font: 0 / 0 a;",
+         "  text-shadow: none;",
+         "  color: transparent;",
+         "}",
+         "",
+         "@mixin font-face(\\$title, \\$path: \"../fonts/\", \\$file: \\$title, \\$weight: normal, \\$style: normal, \\$stretch: normal, \\$transform: normal) {",
+         "  @font-face {",
+         "    font-family: #{\\$title};",
+         "    src: url(\"#{\\$path}#{\\$file}.eot\");",
+         "    src: url(\"#{\\$path}#{\\$file}.eot?#iefix\") format(\"embedded-opentype\"), url(\"#{\\$path}#{\\$file}.woff\") format(\"woff\"), url(\"#{\\$path}#{\\$file}.ttf\") format(\"truetype\"), url(\"#{\\$path}#{\\$file}.svg##{\\$title}\") format(\"svg\");",
+         "    font-weight: \\$weight;",
+         "    font-style: \\$style;",
+         "    font-stretch: \\$stretch;",
+         "    text-transform: transform;",
+         "  }",
+         "  @media screen and (-webkit-min-device-pixel-ratio: 0) {",
+         "    @font-face {",
+         "      font-family: \\$title;",
+         "      src: url(\"#{\\$path}#{\\$file}.svg##{\\$title}\") format(\"svg\");",
+         "    }",
+         "  }",
+         "}",
+         "",
+         "// (\\_/)   gradient mixin",
+         "// (`ㅅ`)づ from https://www.sitepoint.com/building-linear-gradient-mixin-sass/",
+         "// (\")(\")",
+         "",
+         "@function convert-angle(\\$value, \\$unit) {",
+         "  \\$convertable-units: deg grad turn rad;",
+         "  \\$conversion-factors: 1 (10grad/9deg) (1turn/360deg) (3.1415926rad/180deg);",
+         "  @if index(\\$convertable-units, unit(\\$value)) and index(\\$convertable-units, \\$unit) {",
+         "    @return \\$value",
+         "             / nth(\\$conversion-factors, index(\\$convertable-units, unit(\\$value)))",
+         "             * nth(\\$conversion-factors, index(\\$convertable-units, \\$unit));",
+         "  }",
+         "  @warn \"Cannot convert `#{unit(\\$value)}` to `#{\\$unit}`.\";",
+         "}",
+         "",
+         "@function is-direction(\\$value) {",
+         "  \\$is-direction: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), \\$value);",
+         "  \\$is-angle: type-of(\\$value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit(\\$value));",
+         "  @return \\$is-direction or \\$is-angle;",
+         "}",
+         "",
+         "@function legacy-direction(\\$value) {",
+         "  @if is-direction(\\$value) == false {",
+         "    @warn \"Cannot convert `#{\\$value}` to legacy syntax because it doesn't seem to be an angle or a direction\";",
+         "  }",
+         "  \\$conversion-map: (",
+         "    to top          : bottom,",
+         "    to top right    : bottom left,",
+         "    to right top    : left bottom,",
+         "    to right        : left,",
+         "    to bottom right : top left,",
+         "    to right bottom : left top,",
+         "    to bottom       : top,",
+         "    to bottom left  : top right,",
+         "    to left bottom  : right top,",
+         "    to left         : right,",
+         "    to left top     : right bottom,",
+         "    to top left     : bottom right",
+         "  );",
+         "  @if map-has-key(\\$conversion-map, \\$value) {",
+         "    @return map-get(\\$conversion-map, \\$value);",
+         "  }",
+         "  @return 90deg - convert-angle(\\$value, 'deg');",
+         "}",
+         "",
+         "@mixin linear-gradient(\\$direction, \\$color-stops...) {",
+         "  @if is-direction(\\$direction) == false {",
+         "    \\$color-stops: (\\$direction, \\$color-stops);",
+         "    \\$direction: 180deg;",
+         "  }",
+         "  background: nth(nth(\\$color-stops, 1), 1);",
+         "  background: -webkit-linear-gradient(legacy-direction(\\$direction), \\$color-stops);",
+         "  background: linear-gradient(\\$direction, \\$color-stops);",
+         "}"
+      ],
+      "description":"mixin base rules"
+   },
+   "prefix mixin":{
+      "prefix":"prefix",
+      "body":[
+         "+prefix((",
+         "    ${1:transition}: ${2:none // add more with comma}",
+         "  ), ${3:\\$prefixes})"
+      ],
+      "description":"prefix mixin"
+   },
+   "If Else rules":{
+      "prefix":"if",
+      "body":[
+         "@if \\$${1:condition} == ${2:condition 1}",
+         "  ${3:1st condition rules}",
+         "@else if \\$${1:condition} == ${4:condition 2}",
+         "  ${5:2nd condition rules}",
+         "@else if \\$${1:condition} == ${6:condition3}",
+         "  ${7:3rd condition rules}",
+         "@else if \\$${1:condition} == ${8:condition 4}",
+         "  ${9:4th condition rules}",
+         "@else",
+         "  ${10:exception rules}"
+      ],
+      "description":"If Else rules"
+   },
+   "border-box mixin":{
+      "prefix":"border-box",
+      "body":[
+         "+border-box"
+      ],
+      "description":"border-box mixin"
+   },
+   "regular radius mixin":{
+      "prefix":"radius",
+      "body":[
+         "+radius(${1:5px})"
+      ],
+      "description":"regular radius mixin"
+   },
+   "map SCSS instance":{
+      "prefix":"map",
+      "body":[
+         "map-get(${1:group}, ${2:name});"
+      ],
+      "description":"map SCSS instance"
+   },
+   "linear gradient mixin":{
+      "prefix":"gradient",
+      "body":[
+         "${3:// refer to https://www.sitepoint.com/building-linear-gradient-mixin-sass/",
+         "}+linear-gradient($1, $2)"
+      ],
+      "description":"linear gradient mixin"
+   },
+   "disable rules":{
+      "prefix":"disable",
+      "body":[
+         "+disable(${1:link|drag|select})"
+      ],
+      "description":"disable rules"
+   },
+   "mixin rules":{
+      "prefix":"mixin",
+      "body":[
+         "// (`ㅅ`)づ base mixins",
+         "",
+         "\\$prefixes: webkit moz ms o",
+         "",
+         "// Mixin to prefix several properties at once",
+         "// https://css-tricks.com/snippets/sass/mixin-prefix-properties/",
+         "",
+         "=prefix(\\$declarations, \\$prefixes: ())",
+         "  @each \\$property, \\$value in \\$declarations",
+         "    @each \\$prefix in \\$prefixes",
+         "      #{'-' + \\$prefix + '-' + \\$property}: \\$value",
+         "    // Output standard non-prefixed declaration",
+         "    #{\\$property}: \\$value",
+         "",
+         "=transition(\\$prop: all, \\$time: 300ms, \\$ease: ease-out)",
+         "  @if \\$prop == disable",
+         "    +prefix((",
+         "    transition: none",
+         "  ), \\$prefixes)",
+         "  @else",
+         "    +prefix((",
+         "      transition: \\$prop \\$time \\$ease",
+         "    ), \\$prefixes)",
+         "",
+         "=find(\\$color: red)",
+         "  outline: dashed 1px \\$color",
+         "",
+         "=border-box(\\$mode: border-box)",
+         "   +prefix((",
+         "      box-sizing: \\$mode",
+         "    ), \\$prefixes)",
+         "",
+         "=radius(\\$radius-1: 5px, \\$radius-2: 5px, \\$radius-3: 5px, \\$radius-4: 5px, \\$mode: regular)",
+         "  @if \\$mode == regular",
+         "    +prefix((",
+         "    border-radius: \\$radius-1",
+         "    ), \\$prefixes)",
+         "    -moz-background-clip: padding",
+         "    -webkit-background-clip: padding-box",
+         "    background-clip: padding-box",
+         "  @else",
+         "    -webkit-border-top-right-radius: \\$radius-2",
+         "    -webkit-border-bottom-right-radius: \\$radius-3",
+         "    -webkit-border-bottom-left-radius: \\$radius-4",
+         "    -webkit-border-top-left-radius: \\$radius-1",
+         "    -moz-border-radius-topright: \\$radius-2",
+         "    -moz-border-radius-bottomright: \\$radius-3",
+         "    -moz-border-radius-bottomleft: \\$radius-4",
+         "    -moz-border-radius-topleft: \\$radius-1",
+         "    border-top-right-radius: \\$radius-2",
+         "    border-bottom-right-radius: \\$radius-3",
+         "    border-bottom-left-radius: \\$radius-4",
+         "    border-top-left-radius: \\$radius-1",
+         "",
+         "=shadow(\\$mode: box, \\$shadow: 0 1px 3px rgba(0, 0, 0, 0.25))",
+         "  @if \\$mode == text",
+         "     +prefix((",
+         "        text-shadow: \\$shadow",
+         "      ), \\$prefixes)",
+         "  @else",
+         "     +prefix((",
+         "        box-shadow: \\$shadow",
+         "      ), \\$prefixes)",
+         "",
+         "=opacity(\\$opacity: 40)",
+         "  opacity: \\$opacity / 100",
+         "  filter: \"alpha(opacity=#{\\$opacity})\"",
+         "  -khtml-opacity: \\$opacity / 100",
+         "  -moz-opacity: \\$opacity / 100",
+         "",
+         "=reset(\\$type: all)",
+         "  @if \\$type == margin",
+         "    margin: 0px !important",
+         "  @else if \\$type == padding",
+         "    padding: 0px !important",
+         "  @else if \\$type == border",
+         "    border: none",
+         "  @else if \\$type == bg",
+         "    background: transparent",
+         "  @else if \\$type == list",
+         "    list-style: none",
+         "  @else if \\$type == select",
+         "    -moz-appearance: none",
+         "    -webkit-appearance: none",
+         "  @else if \\$type == shadow",
+         "    +shadow(normal, none)",
+         "  @else if \\$type == outline",
+         "    outline-width: 0",
+         "    outline: none !important",
+         "    outline-color: transparent",
+         "    outline-style: none",
+         "  @else if \\$type == shadow-text",
+         "    +shadow(text, none)",
+         "  @else if \\$type == number",
+         "    &[type=number]::-webkit-inner-spin-button, &[type=number]::-webkit-outer-spin-button",
+         "      -webkit-appearance: none",
+         "      -moz-appearance: none",
+         "      appearance: none",
+         "      margin: 0",
+         "  @else",
+         "    margin: 0px !important",
+         "    padding: 0px !important",
+         "    border: none",
+         "    background: transparent",
+         "    &:focus",
+         "      outline-width: 0",
+         "      outline: none",
+         "      outline-color: transparent",
+         "      outline-style: none",
+         "",
+         "=clearfix",
+         "  zoom: 1",
+         "  &:before, &:after",
+         "    display: table",
+         "    content: \"\"",
+         "  &:after",
+         "    clear: both",
+         "",
+         "// (`ㅅ`)づ animation mixins",
+         "",
+         "=rotate(\\$rotate: 0)",
+         "   +prefix((",
+         "      transform: rotate(\\$rotate + deg)",
+         "    ), \\$prefixes)",
+         "",
+         "=scale(\\$scale: 1)",
+         "   +prefix((",
+         "      transform: scale(\\$scale)",
+         "    ), \\$prefixes)",
+         "",
+         "=skew(\\$skew: 0)",
+         "   +prefix((",
+         "      transform: skew(\\$skew + deg)",
+         "    ), \\$prefixes)",
+         "",
+         "=translate(\\$x: 0, \\$y: 0, \\$z: 0, \\$type: other)",
+         "  @if \\$type == 3d",
+         "     +prefix((",
+         "        transform: translate3d(\\$x + px, \\$y + px, \\$z + px)",
+         "      ), \\$prefixes)",
+         "  @else",
+         "     +prefix((",
+         "        transform: translate(\\$x + px, \\$y + px)",
+         "      ), \\$prefixes)",
+         "",
+         "// (`ㅅ`)づ forms mixins",
+         "",
+         "=disable(\\$type: link)",
+         "  @if \\$type == \"select\"",
+         "     +prefix((",
+         "        user-select: none",
+         "      ), moz webkit ms)",
+         "  @else if \\$type == \"drag\"",
+         "     +prefix((",
+         "        user-drag: none",
+         "      ), webkit)",
+         "  @else if \\$type == \"link\"",
+         "    pointer-events: none",
+         "    cursor: default",
+         "",
+         "=placeholder(\\$animate: true)",
+         "  &.placeholder",
+         "    @content",
+         "  &::-webkit-input-placeholder",
+         "    @content",
+         "  &:-moz-placeholder",
+         "    @content",
+         "  &::-moz-placeholder",
+         "    @content",
+         "  &:-ms-input-placeholder",
+         "    @content",
+         "  @if \\$animate == \"true\"",
+         "    &:focus::-webkit-input-placeholder",
+         "      transition: all 0.5s 0.1s ease",
+         "      text-indent: -50%",
+         "      opacity: 0",
+         "",
+         "// (`ㅅ`)づ typography mixins",
+         "",
+         "=word-wrap",
+         "  word-break: break-word",
+         "   +prefix((",
+         "      hyphens: auto",
+         "    ), webkit moz)",
+         "",
+         "=ellipsis",
+         "  overflow: hidden",
+         "  white-space: nowrap",
+         "  text-overflow: ellipsis",
+         "",
+         "=hide-text",
+         "  font: 0 / 0 a",
+         "  text-shadow: none",
+         "  color: transparent",
+         "",
+         "=font-face(\\$title, \\$path: \"../fonts/\", \\$file: \\$title, \\$weight: normal, \\$style: normal, \\$stretch: normal, \\$transform: normal)",
+         "  @font-face",
+         "    font-family: #{\\$title}",
+         "    src: url(\"#{\\$path}#{\\$file}.eot\")",
+         "    src: url(\"#{\\$path}#{\\$file}.eot?#iefix\") format(\"embedded-opentype\"), url(\"#{\\$path}#{\\$file}.woff\") format(\"woff\"), url(\"#{\\$path}#{\\$file}.ttf\") format(\"truetype\"), url(\"#{\\$path}#{\\$file}.svg##{\\$title}\") format(\"svg\")",
+         "    font-weight: \\$weight",
+         "    font-style: \\$style",
+         "    font-stretch: \\$stretch",
+         "    text-transform: transform",
+         "  @media screen and (-webkit-min-device-pixel-ratio: 0)",
+         "    @font-face",
+         "      font-family: \\$title",
+         "      src: url(\"#{\\$path}#{\\$file}.svg##{\\$title}\") format(\"svg\")",
+         "",
+         "// (\\_/)   gradient mixin",
+         "// (`ㅅ`)づ from https://www.sitepoint.com/building-linear-gradient-mixin-sass/",
+         "// (\")(\")",
+         "",
+         "@function convert-angle(\\$value, \\$unit)",
+         "  \\$convertable-units: deg grad turn rad",
+         "  \\$conversion-factors: 1 (10grad/9deg) (1turn/360deg) (3.1415926rad/180deg)",
+         "  @if index(\\$convertable-units, unit(\\$value)) and index(\\$convertable-units, \\$unit)",
+         "    @return \\$value",
+         "             / nth(\\$conversion-factors, index(\\$convertable-units, unit(\\$value)))",
+         "             * nth(\\$conversion-factors, index(\\$convertable-units, \\$unit))",
+         "  @warn \"Cannot convert `#{unit(\\$value)}` to `#{\\$unit}`.\"",
+         "",
+         "@function is-direction(\\$value)",
+         "  \\$is-direction: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), \\$value)",
+         "  \\$is-angle: type-of(\\$value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit(\\$value))",
+         "  @return \\$is-direction or \\$is-angle",
+         "",
+         "@function legacy-direction(\\$value)",
+         "  @if is-direction(\\$value) == false",
+         "    @warn \"Cannot convert `#{\\$value}` to legacy syntax because it doesn't seem to be an angle or a direction\"",
+         "  \\$conversion-map: (",
+         "    to top          : bottom,",
+         "    to top right    : bottom left,",
+         "    to right top    : left bottom,",
+         "    to right        : left,",
+         "    to bottom right : top left,",
+         "    to right bottom : left top,",
+         "    to bottom       : top,",
+         "    to bottom left  : top right,",
+         "    to left bottom  : right top,",
+         "    to left         : right,",
+         "    to left top     : right bottom,",
+         "    to top left     : bottom right",
+         "  )",
+         "  @if map-has-key(\\$conversion-map, \\$value)",
+         "    @return map-get(\\$conversion-map, \\$value)",
+         "  @return 90deg - convert-angle(\\$value, 'deg')",
+         "",
+         "=linear-gradient(\\$direction, \\$color-stops...)",
+         "  @if is-direction(\\$direction) == false",
+         "    \\$color-stops: (\\$direction, \\$color-stops)",
+         "    \\$direction: 180deg",
+         "  background: nth(nth(\\$color-stops, 1), 1)",
+         "  background: -webkit-linear-gradient(legacy-direction(\\$direction), \\$color-stops)",
+         "  background: linear-gradient(\\$direction, \\$color-stops)"
+      ],
+      "description":"mixin rules"
+   },
+   "frontmatter blog post":{
+      "prefix":"frontmatter",
+      "body":[
+         "---",
+         "title:       ${1:title}",
+         "description: ${2:a shared events calendar}",
+         "category:    ${3:resources}",
+         "slug:        ${4:slug}",
+         "template:    ${5:post.hbs}",
+         "date:        ${6:2015-07-31}",
+         "author:      ${7:Nicholas Frota}",
+         "---",
+         "$8"
+      ],
+      "description":"frontmatter blog post"
+   }
+}
   "blur filter": {
     "prefix": "filter",
     "body": [
